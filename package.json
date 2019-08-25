@@ -22,12 +22,15 @@
   "scripts": {
     "lint": "eslint src/**/*.js",
     "lintfix": "eslint src/**/*.js --fix",
+    "preserve": "npm run build",
+    "serve": "node server.js",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
