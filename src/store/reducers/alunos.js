@@ -7,7 +7,7 @@ const initialState = {
 export const FETCH_ALUNOS = "FETCH_ALUNOS";
 export const fetchAlunos = () => dispatch => {
   return api.get("/student").then(response => {
-    const { data } = response;
+    let { data } = response;
     data = data.sort((a, b) => b.score - a.score);
     dispatch({ type: FETCH_ALUNOS, payload: data });
   });
